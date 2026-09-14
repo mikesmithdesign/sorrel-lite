@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+  Sorrel Lite — free one-page template for hair salons & barbershops
+  Free for personal and commercial use. Attribution appreciated.
+  Full version (multipage, price-list booking, team page, filterable work
+  gallery with lightbox, four colour packs, JSON-driven content, Astro):
+  https://mikesmithdesign.gumroad.com/l/sorrel-astro-theme
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorrel Lite — free hair salon website template</title>
+<meta name="description" content="Sorrel Lite — a free one-page HTML template for hair salons and barbershops. Warm clay palette, arch photography, a booking form and a live open/closed badge. Full multipage Astro version available.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-pack="clay">
+
+<header class="top top--trans">
+  <div class="wrap">
+    <a class="brand" href="#top">sorrel<span>hair studio</span></a>
+    <div class="top-right">
+      <a class="btn tbook" href="#book">Book an appointment</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-img"><img src="img/hero.jpg" alt="A warm independent hair salon interior: wash basin, sconce lights and salon mirrors in soft evening light" fetchpriority="high"></div>
+  <div class="wrap">
+    <span class="lbl">Hair studio, Chapel Allerton</span>
+    <h1>Colour that <em>survives</em> the&nbsp;regrowth.</h1>
+    <p class="h-sub">Cuts that behave between visits. Sorrel is an independent two-chair hair studio in Chapel Allerton, Leeds.</p>
+    <div class="h-cta">
+      <a class="btn hb" href="#book">Book an appointment</a>
+      <a class="btn hghost" href="#services">Services &amp; prices</a>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap">
+    <div>
+      <h2>What we do, and what it costs.</h2>
+      <p class="svc-lede">Colour work starts with a free 15 minute consultation, so the price you're quoted is the price you pay.</p>
+      <ul class="svc-list" id="svcList">
+        <li><a href="#book" data-fig="f-cut"><span class="n">Cuts</span><span class="m">from &pound;34</span></a></li>
+        <li><a href="#book" data-fig="f-colour"><span class="n">Colour</span><span class="m">from &pound;38</span></a></li>
+        <li><a href="#book" data-fig="f-style"><span class="n">Styling</span><span class="m">from &pound;30</span></a></li>
+        <li><a href="#book" data-fig="f-treat"><span class="n">Treatments</span><span class="m">from &pound;18</span></a></li>
+      </ul>
+    </div>
+    <div class="svc-fig arch" id="svcFig">
+      <img id="f-cut" class="on" src="img/cut.jpg" alt="Scissors mid-cut through a straight section of hair">
+      <img id="f-colour" src="img/colour.jpg" alt="Foils folded through a full head of hair" loading="lazy">
+      <img id="f-style" src="img/style.jpg" alt="Hands setting a wave through long auburn hair" loading="lazy">
+      <img id="f-treat" src="img/treat.jpg" alt="Soft glossed waves after a treatment" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <p class="qb reveal">&ldquo;Priya took me from box-dye black to a soft brown over three visits, <em>honest at every step</em> about what my hair could take.&rdquo;</p>
+    <p class="qs">Nina W., colour correction client, Google review</p>
+  </div>
+</section>
+
+<p class="pg-close-label">Recent work from the chairs.</p>
+<div class="pg-close" aria-label="Recent work">
+  <a href="#book"><img src="img/work3.jpg" alt="Cool ash gloss over soft waves" loading="lazy"></a>
+  <a href="#book"><img src="img/work6.jpg" alt="Long copper hair mid trim" loading="lazy"></a>
+  <a href="#book"><img src="img/work8.jpg" alt="Chestnut pixie crop, textured finish" loading="lazy"></a>
+  <a href="#book"><img src="img/work9.jpg" alt="Natural curls with sun-lightened ends" loading="lazy"></a>
+</div>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="b-grid">
+      <form class="bform" id="bookForm" novalidate>
+        <div class="row duo">
+          <div>
+            <label for="bfName">Your name</label>
+            <input type="text" id="bfName" name="name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="bfPhone">Mobile number</label>
+            <input type="tel" id="bfPhone" name="phone" autocomplete="tel" placeholder="07700 900000" required>
+          </div>
+        </div>
+        <div class="row">
+          <label for="bfDate">Preferred date</label>
+          <input type="date" id="bfDate" name="date" required>
+          <p class="hint">We're closed Sunday and Monday. Thursdays run late, to 8pm.</p>
+        </div>
+        <div class="row">
+          <label for="bfNotes">Anything we should know? <span style="font-weight:400">(optional)</span></label>
+          <textarea id="bfNotes" name="notes" placeholder="Service you'd like, hair length, morning or afternoon"></textarea>
+        </div>
+        <button class="btn" type="submit">Request appointment</button>
+      </form>
+      <div class="book-ok" id="bookOk" role="status">
+        <b>Request sent.</b>
+        <span>Thanks, we've got it. We'll text you to confirm the time, or offer the nearest one we can do. Nothing is booked until you hear from us.</span>
+      </div>
+
+      <aside class="baside">
+        <div class="stamp" id="stamp" aria-live="polite"><b>Checking hours</b><span>one moment</span></div>
+        <div class="talk">
+          <h2>Rather talk to a human?</h2>
+          <p>Ring the studio and whoever isn't holding a hairdryer will answer.</p>
+          <a class="tel" href="tel:+441134960741">0113 496 0741</a>
+        </div>
+        <div class="hoursboard">
+          <h2>Hours</h2>
+          <div class="hgroup" data-days="2,3"><span class="hd">Tuesday &amp; Wednesday</span><span class="ht">9:00 to 18:00</span></div>
+          <div class="hgroup" data-days="4"><span class="hd">Thursday</span><span class="ht">9:00 to 20:00</span></div>
+          <div class="hgroup" data-days="5"><span class="hd">Friday</span><span class="ht">9:00 to 18:00</span></div>
+          <div class="hgroup" data-days="6"><span class="hd">Saturday</span><span class="ht">8:30 to 16:00</span></div>
+          <div class="hgroup" data-days="0,1"><span class="hd">Sunday &amp; Monday</span><span class="ht">Closed</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="roomshot">
+  <div class="wrap">
+    <div class="ph"><img src="img/room1.jpg" alt="A styling chair and basin waiting by the window" loading="lazy"></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="fbrand">sorrel</p>
+        <p class="fabout">An independent hair studio on Stainbeck Lane, Chapel Allerton. Two chairs, no double-booking, honest advice since 2019.</p>
+        <p class="fcontact"><b>6 Stainbeck Lane, Leeds LS7 3PG</b><br>
+          <a href="tel:+441134960741">0113 496 0741</a><br>
+          <a href="mailto:hello@sorrelhair.co.uk">hello@sorrelhair.co.uk</a><br>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">@sorrelhairstudio on Instagram</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul class="fhours">
+          <li><span>Tuesday &amp; Wednesday</span><span>9:00&ndash;18:00</span></li>
+          <li><span>Thursday</span><span>9:00&ndash;20:00</span></li>
+          <li><span>Friday</span><span>9:00&ndash;18:00</span></li>
+          <li><span>Saturday</span><span>8:30&ndash;16:00</span></li>
+          <li><span>Sun &amp; Monday</span><span>Closed</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; Sorrel Hair Studio 2026</span>
+      <span>A fictional salon. Demo theme by Mike Smith Design. Photography is placeholder, replace for production.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="dockbar">
+  <a class="d-call" href="tel:+441134960741">Call us</a>
+  <a class="d-book" href="#book" aria-label="Book an appointment">Book</a>
+</div>
+
+<script src="lenis.min.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
