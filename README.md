@@ -39,4 +39,4 @@ lightbox, four colour packs with a one-click switcher, and a JSON data
 layer so the whole site rebrands from a handful of files, built as an
 Astro 7 project.
 
-→ https://mikesmithdesign.gumroad.com/l/sorrel-astro-theme (£20)
+→ [Sorrel, the full Astro theme for hair and beauty salons](https://mikesmithdesign.co.uk/themes/sorrel) (£20)
