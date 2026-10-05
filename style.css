@@ -450,3 +450,6 @@ html.static .reveal{opacity:1!important;transform:none!important}
   .hero .hero-img img{animation:none!important}
   .gitem{animation:none!important}
   .pg-close a img,.gitem img,.svc-fig img{transition:none!important}}
+
+/* the template credit should read as a link, like the other footer links */
+a[href*="mikesmithdesign.co.uk"]{text-decoration:underline;text-underline-offset:2px}
